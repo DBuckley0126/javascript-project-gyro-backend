@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: javascript-project-gyro_production
-  username: javascript-project-gyro
-  password: <%= ENV['JAVASCRIPT-PROJECT-GYRO_DATABASE_PASSWORD'] %>
+  database: javascript-project-gyro-back_production
+  username: javascript-project-gyro-back
+  password: <%= ENV['JAVASCRIPT-PROJECT-GYRO-BACK_DATABASE_PASSWORD'] %>

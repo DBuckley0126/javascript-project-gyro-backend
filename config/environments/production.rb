@@ -104,6 +104,6 @@ Rails.application.configure do
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
 
   # action Cable setup
-  config.action_cable.allowed_request_origins = ['https://javascript-project-gyro.herokuapp.com', 'http://javascript-project-gyro.herokuapp.com', 'file://']
-  config.web_socket_server_url = "wss://javascript-project-gyro.herokuapp.com/cable" 
+  config.action_cable.allowed_request_origins = ['https://javascript-project-gyro-back.herokuapp.com', 'http://javascript-project-gyro-back.herokuapp.com', 'file://']
+  config.web_socket_server_url = "wss://javascript-project-gyro-back.herokuapp.com/cable" 
 end
