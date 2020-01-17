@@ -18,6 +18,8 @@ ActiveRecord::Schema.define(version: 2020_01_16_172311) do
   create_table "games", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "message"
+    t.string "#<ActiveRecord::ConnectionAdapters::PostgreSQL::TableDefinition"
   end
 
 end
