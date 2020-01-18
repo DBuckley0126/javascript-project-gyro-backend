@@ -2,7 +2,7 @@ class CreateGames < ActiveRecord::Migration[6.0]
   def change
     create_table :games do |t|
 
-      t.string :message,
+      t.integer :join_code,
 
       t.timestamps
     end
