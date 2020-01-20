@@ -16,7 +16,7 @@ class GameChannel < ApplicationCable::Channel
       end
     else
       reject if Game.find_by(join_code: params[:join_code])
-      
+
       game = Game.new(join_code: params[:join_code])
       game.save
       stream_from "game_channel_#{game.join_code}"
@@ -41,6 +41,15 @@ class GameChannel < ApplicationCable::Channel
          type: "data_relay",
          body: data["body"]
        )
+  end
+
+  def sensor_data_relay(data)
+    ActionCable.server.broadcast(
+      "game_channel_#{params[:join_code]}",
+      action: data["action"],
+      type: "sensor_data_relay",
+      body: data["body"]
+    )
   end
 
 end
