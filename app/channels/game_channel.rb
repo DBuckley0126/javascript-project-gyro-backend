@@ -34,11 +34,11 @@ class GameChannel < ApplicationCable::Channel
 
   end
 
-  def data_relay(data)
+  def desktop_ping(data)
       ActionCable.server.broadcast(
          "game_channel_#{params[:join_code]}",
-         action: "data_relay",
-         type: "data_relay",
+         action: data["action"],
+         type: "desktop_ping",
          body: data["body"]
        )
   end
