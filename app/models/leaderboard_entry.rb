@@ -1,3 +1,3 @@
 class LeaderboardEntry < ApplicationRecord
-  has_one :nickname
+  belongs_to :nickname
 end

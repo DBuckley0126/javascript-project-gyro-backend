@@ -2,8 +2,6 @@
 
 one:
   nickname: MyString
-  total_score: 1
 
 two:
   nickname: MyString
-  total_score: 1
