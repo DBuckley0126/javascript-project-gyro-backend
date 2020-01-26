@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_16_172311) do
+ActiveRecord::Schema.define(version: 2020_01_25_195601) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,19 @@ ActiveRecord::Schema.define(version: 2020_01_16_172311) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "join_code"
     t.integer "#<ActiveRecord::ConnectionAdapters::PostgreSQL::TableDefinition"
+  end
+
+  create_table "leaderboard_entries", force: :cascade do |t|
+    t.string "nickname_id"
+    t.integer "score"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "nicknames", force: :cascade do |t|
+    t.string "nickname"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
 end

@@ -1,6 +1,5 @@
 class LeaderboardEntrySerializer
   include FastJsonapi::ObjectSerializer
-  belongs_to :nickname
-  attributes :nickname, :score
+  attributes :nickname, :score, :date
 
 end
