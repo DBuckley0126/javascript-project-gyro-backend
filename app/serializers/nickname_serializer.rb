@@ -1,9 +1,11 @@
 class NicknameSerializer
   include FastJsonapi::ObjectSerializer
-  attributes :nickname, :total_score, :highest_score
+  has_many :leaderboard_entries
 
-  attribute :leaderboard_entries do |object|
-    object.filtered_api_call(:leaderboard_entries, [:id, :score])
-  end
+  attributes :nickname, :highest_score
+
+  # attribute :leaderboard_entries do |object|
+  #   object.filtered_api_call(:leaderboard_entries, [:id, :score])
+  # end
 
 end
